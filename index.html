@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Интернет-магазин</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/media.css">
+        <script src="https://use.fontawesome.com/d55499613e.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="./js/script.js"></script>
+    </head>
+    <body id="body">
+        <div class="wrapper">
+            <header class="header">
+                <a href="./" class="header-block logo-block">
+                    <img src="/img/logo.png" alt="logo">
+                </a>
+                <div class="header-block menu-block">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a href="#" class="selected menu-link">Главная</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">О нас</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Наш коллектив</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="/news.html" class="menu-link">Новости</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Контакты</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Услуги</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="/train.html" class="menu-link">Тренировки</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="./profile.html" class="header-block login-block" id="user-info">
+                    
+                </a>
+            </header>
+            <main class="main">
+                <div class="start-screen">
+                    <div class="video-block">
+                        <video autoplay muted loop id="mainVideo">
+                            <source src="./video/start_1.mp4">
+                        </video>
+                    </div>
+                    <div class="text-block">
+                        <span class="slogan">Фитнес-клуб <span class="red">RoadToTheGym</span><br> в Тагил-сити</span>
+                    </div>
+                    <div class="btn-block">
+                        <button class="order">Заказать абонемент</button>
+                    </div>
+                    <div class="bottom-btn">
+                        <button class="bottom" id="scrollBtn"><i class="fa fa-regular fa-angle-down"></i></button>
+                    </div>
+                </div>
+                <div class="main-block advantages-block">
+                    <div class="title-block">
+                        <h2 class="title">Преимущества</h2>
+                    </div>
+                    <div class="advantages">
+                        <div class="advantage simulators-block">
+                            <div class="img-block">
+                                <img src="./img/icon-workout-machine.svg" alt="">
+                            </div>
+                            <div class="text-block">
+                                <h3 class="title">Очень много тренажеров</h3>
+                                <span class="text">Большой ассортимент профессиональных тренажеров позволяет вам заниматься без ожидания очереди на каждый тренажер.</span>
+                            </div>
+                        </div>
+                        <div class="advantage all-inclusive-block">
+                            <div class="img-block">
+                                <img src="./img/piggybank.svg" alt="">
+                            </div>
+                            <div class="text-block">
+                                <h3 class="title">Система "ВСЕ ВКЛЮЧЕНО"</h3>
+                                <span class="text">Вам не придется доплачивать за групповые занятия, сауну, воду или полотенца. Эти и многие другие услуги уже включены в вашу карту.</span>
+                            </div>
+                        </div>
+                        <div class="advantage halls-block">
+                            <div class="img-block">
+                                <img src="./img/icon-training.svg" alt="">
+                            </div>
+                            <div class="text-block">
+                                <h3 class="title">Просторные и светлые залы</h3>
+                                <span class="text">Вам не придется доплачивать за групповые занятия, сауну, воду или полотенца. Эти и многие другие услуги уже включены в вашу карту.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-block news-block">
+                    <div class="title-block">
+                        <h2 class="title">Последние новости</h2>
+                    </div>
+                    <div id="lastNews" class="news">
+                        <!-- <div class="news-card">
+                            <div class="top-block">
+                                <div class="news-title">
+                                    <h1 class="">Эксперт рассказала о занятиях спортом без вреда для здоровья
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="bottom-block">
+                                <div class="date-block">
+                                    <span class="date-span">Дата публикации: <span class="date"></span></span>
+                                </div>
+                                <div class="btn-block">
+                                    <button class="detailed-btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-card">
+                            <div class="top-block">
+                                <div class="news-title">
+                                    <h1 class="">Эксперт рассказала о занятиях спортом без вреда для здоровья
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="bottom-block">
+                                <div class="date-block">
+                                    <span class="date-span">Дата публикации: <span class="date"></span></span>
+                                </div>
+                                <div class="btn-block">
+                                    <button class="detailed-btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="contacts-block">
+                    <div class="map-block">
+                        <iframe class="map-iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A657ea5a99184ca4c472ba4950a66df3455f962152af6b3f1e42a44b206e16bf2&amp;source=constructor" width="657" height="657" frameborder="0"></iframe>
+                    </div>
+                    <div class="text-block">
+                        <div class="title-block">
+                            <h2 class="title">Контакты</h2>
+                        </div>
+                        <div class="info-block">
+                            <div class="span-block">
+                                <span class="contact">ул. Правды, д. 28, этаж 2</span>
+                                <span class="contact">С понедельника по пятницу с 07:00 по 19:00</span>
+                                <span class="contact">С субботы по воскресенье с 9:00 по 21:00</span>
+                                <span class="contact">Телефон: +7 (982) 853-23-23</span>
+                            </div>
+                            <div class="links-block">
+                                <a href="https://vk.com/ntsk_nt"><i class="fa fa-brands fa-vk icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="creator-block">
+                    <span class="creator">Сайт разработал Гизатуллин Тимур</span>
+                    <div class="up-block">
+                        <button id="btn-up" class="btn-up"><i class="fa fa-solid fa-angle-up"></i></button>
+                    </div>
+                </div>
+            </main>
+        </div> 
+    </body> 
+    <script>
+        $(document).ready(function() {
+            //Появление и исчезновение кнопки для прокрутки вверх
+            $(window).scroll(function() {
+                let scroll = $(window).scrollTop() + $(window).height();
+                let offset = $(".creator-block").offset().top;
+                if(scroll > offset) {
+                    $(".creator-block .up-block .btn-up").css("opacity", "1");
+                }  else {
+                    $(".creator-block .up-block .btn-up").css("opacity", "0");
+                }
+            });
+
+            //Прокрутка экрана
+            $("#scrollBtn").click(function() {
+                $("html, body").animate({
+                    scrollTop: $(window).height()
+                }, {
+                    duration: 600,
+                    easing: "swing"
+                });
+            });
+
+            //Прокрутка до упора вверх
+            $("#btn-up").click(function() {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, {
+                    duration: 1000,
+                    easing: "swing"
+                });
+            });
+        });
+    </script>
+</html>

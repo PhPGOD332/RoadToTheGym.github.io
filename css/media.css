@@ -1,0 +1,83 @@
+@media screen and (max-width: 1440px) {
+    .title {
+        font-size: 48px;
+    }
+
+    .header {
+        height: 80px;
+        padding: 20px 20px;
+    }
+
+    .header .menu-list .menu-item .menu-link {
+        font-size: 20px;
+    }
+
+    .main .start-screen .text-block .slogan {
+        font-size: 72px;
+    }
+
+    .main .start-screen .btn-block .order {
+        border-radius: 70px;
+        padding: 25px 35px;
+        font-size: 25px;
+        color: #BF0404;
+    }
+
+    .main .start-screen .bottom-btn .bottom {
+        font-size: 50px;
+    }
+
+    .main .advantages-block .title-block .title {
+        font-size: 48px;
+    }
+
+    .main .advantages-block .title-block .title::before {
+        width: 200px;
+        left: calc(50% - 100px);
+    }
+
+    .main .news-block .news .news-card {
+        height: 400px;
+    }
+
+    .main .news-block .news .news-card .news-title h1 {
+        font-size: 24px;
+    }
+
+    .main .news-block .news .news-card .news-text p {
+        font-size: 18px;
+    }
+
+    .main .news-block .news .news-card .bottom-block .date-block .date-span {
+        font-size: 16px;
+    }
+
+    .main .news-block .news .news-card .bottom-block .btn-block .detailed-btn {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .main .contacts-block .text-block .title-block {
+        margin-bottom: 50px;
+    }
+
+    .main .contacts-block .text-block .title-block .title {
+        font-size: 32px;
+    }
+
+    .main .contacts-block .text-block .info-block .span-block .contact {
+        font-size: 18px;
+    }
+
+    .main .contacts-block .text-block .info-block .links-block .icon {
+        font-size: 40px;
+    }
+
+    .main .creator-block .creator {
+        font-size: 18px;
+    }
+
+    .main .creator-block .up-block .btn-up {
+        font-size: 50px;
+    }
+}

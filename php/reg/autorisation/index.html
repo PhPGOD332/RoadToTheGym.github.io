@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Интернет-магазин</title>
+        <link rel="stylesheet" href="../../../css/style.css">
+        <link rel="stylesheet" href="../../../css/media.css">
+        <script src="https://use.fontawesome.com/d55499613e.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <!-- <script src="../../../js/script.js"></script> -->
+    </head>
+    <body class="bodyAutorise" id="bodyAutorise">
+        <div class="bg-block">
+            <div id="form-autorisation" class="form-autorise">
+                <div class="inner-block">
+                    <label for="" class="login-block">
+                        Логин:
+                        <input id="login" name="login" type="text" class="login-input input-text">
+                        <span id="error-login" class="error"></span>
+                    </label>
+                    <label for="" class="pass-block">
+                        Пароль:
+                        <input id="password" name="password" type="password" class="pass-input input-text">
+                        <span id="error-password" class="error"></span>
+                    </label>
+                    <span id="error-form" class="error"></span>
+                    <div class="reg-block">
+                        <span>Ещё не авторизованы? <a href="../registration/index.html" class="reg-link">Зарегистрируйтесь!</a></span>
+                    </div>
+                    <div for="" class="btn-block">
+                        <input name="submit_autorise" id="submit_autorise" type="submit" class="submit-input" value="Войти">
+                        <a href="../../../index.html" class="back-btn">Назад</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        //Обработка формы
+        $("#submit_autorise").on("click", function() {
+            $("#error-login").html("");
+            $("#error-password").html("");
+            $("#error-form").html("");
+            if(!$("#login").val() && !$("#password").val()) {
+                $("#login").css("outline", "2px solid #BF0404");
+                $("#error-login").html("Введите логин");
+                $("#error-password").html("Введите пароль");
+                return false;
+            } else if($("#login").val() && !$("#password").val()) {
+                $("#error-password").html("Введите пароль");
+                return false;
+            } else if(!$("#login").val() && $("#password").val()) {
+                $("#error-login").html("Введите логин");
+                return false;
+            } else {
+                let login = $("#login").val();
+                let pass = $("#password").val();
+                $.ajax({
+                    url: "./autorization_handler.php",
+                    cache: false,
+                    method: "POST",
+                    data: {login : login, pass : pass}
+                })
+                .done(function(rez) {
+                    $("#error-form").html(rez);
+                })
+            }
+        });
+    </script>
+</html>

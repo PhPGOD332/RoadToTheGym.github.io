@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Интернет-магазин</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/media.css">
+        <script src="https://use.fontawesome.com/d55499613e.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="./js/script.js"></script>
+    </head>
+    <body id="bodyProfile">
+        <div class="wrapper">
+            <main class="main">
+                <div class="bg-block">
+                    <div class="profile-block">
+                        <div id="avatar-block" class="avatar-block">
+                            <!--- Блок с именем, аватаркой и статусом --->
+                        </div>
+                        <div class="char-block">
+                            <div class="btn-block">
+                                <button class="btn about-btn selected">О пользователе</button>
+                                <button class="btn about-btn">Новости</button>
+                            </div>
+                            <div class="bottom-block">
+                                <div class="title-profile-block">
+                                    <span class="title-profile">Основная информация</span>
+                                </div>
+                                <div class="table-block" id="table-block">
+                                    <!--- Таблица с основной информацией --->
+                                </div>
+                                <div class="back-page-block">
+                                    <a href="./index.html" class="back-btn">Вернуться на главную</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div> 
+    </body> 
+    <script>
+        $(document).ready(function() {
+            imgWidth = $(".img-block").width();
+            $(".img-block").height($(".img-block").width());
+
+            $(window).resize(function() {
+                $(".img-block").height($(".img-block").width());
+            });
+
+            $.ajax({
+                url: "./php/user/profile/img-block.php",
+                cache: false,
+                method: "POST"
+            }) 
+            .done(function(rez) {
+                $("#avatar-block").html(rez);
+            })
+
+            $.ajax({
+                url: "./php/user/profile/table-block.php",
+                cache: false,
+                method: "POST"
+            }) 
+            .done(function(rez) {
+                $("#table-block").html(rez);
+            })
+        });
+    </script>
+</html>
